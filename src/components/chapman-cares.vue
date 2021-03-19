@@ -20,6 +20,7 @@
             </div>
         </div>
 
+        <!-- Career Section -->
         <HeadingText>{{ career.title }}</HeadingText>
         <div class="career-flex-container">
             <div class="career-right">
@@ -30,6 +31,7 @@
             </div>
             <div class="career-left">
                 <p class="career-text">{{ career.text }}</p>
+                <!-- Form submission indicators for loading and success -->
                 <SubmissionIndicator v-show="career.isSubmitting">
                     <img :src="require('@/assets/indicator-loading.svg')" />
                     <p>Submitting information...</p>
@@ -43,6 +45,7 @@
                         Resubmit
                     </button>
                 </SubmissionIndicator>
+                <!-- Form error handling -->
                 <div v-if="career.formErrors.length">
                     <b>Please correct the following error(s)</b>
                     <ul>
@@ -64,7 +67,6 @@
                         v-model.lazy="career.formName"
                         type="text"
                         name="form-name"
-                        class="form-input"
                         :disabled="career.isSubmitting"
                     />
                     <label for="form-phone">Phone</label>
@@ -73,13 +75,12 @@
                         v-model.lazy="career.formPhone"
                         type="text"
                         name="form-phone"
-                        class="form-input"
                         :disabled="career.isSubmitting"
                     />
                     <input
                         class="yellow-button"
                         type="submit"
-                        :value="career.formSubmit"
+                        value="I'm Interested!"
                         :disabled="career.isSubmitting"
                     />
                 </form>
@@ -124,7 +125,6 @@ export default {
                 formErrors: [],
                 formName: '',
                 formPhone: '',
-                formSubmit: `I'm Interested!`,
                 isSubmitting: false,
                 isSubmitSuccess: false,
             },

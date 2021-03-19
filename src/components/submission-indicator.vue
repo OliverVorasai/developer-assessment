@@ -13,12 +13,9 @@ export default {
 <style lang="scss" scoped>
 .submission-indicator {
     text-align: center;
+    font-weight: bold;
     img {
         width: 25%;
-    }
-    p {
-        margin-top: 0;
-        font-weight: bold;
     }
 }
 </style>
