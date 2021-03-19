@@ -23,7 +23,7 @@ export default {
     methods: {
         getTemp() {
             // set variables (there are no errors in these strings)
-            const url = 'http://api.openweathermap.org/data/2.5/weather';
+            const url = 'https://api.openweathermap.org/data/2.5/weather';
             const zipCode = '85226';
             const apiKey = 'eab29b6df2f075a12235544ff5dcdd52';
             const units = 'imperial';
